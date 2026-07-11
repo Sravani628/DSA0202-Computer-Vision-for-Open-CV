@@ -1,0 +1,14 @@
+import cv2
+
+img = cv2.imread(r"C:\Users\srava\OneDrive\Desktop\Pictures\Screenshot 2026-07-11 140801.png", 0)
+
+sobel = cv2.Sobel(img, cv2.CV_64F, 1, 1, ksize=3)
+
+canny = cv2.Canny(img, 100, 200)
+
+cv2.imshow("Original", img)
+cv2.imshow("Sobel", sobel)
+cv2.imshow("Canny", canny)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
